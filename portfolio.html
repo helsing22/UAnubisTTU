@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio - AnubisYRTattoo</title>
   <link rel="stylesheet" href="css/style.css" />
-  <img src="imagen/IMG-20251105-WA0039.jpg" alt= "logo"/>
 </head>
 <body>
   <header>
-    <h1>Portafolio</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="portfolio.html">Portafolio</a>
@@ -17,18 +15,20 @@
     </nav>
   </header>
 
-  <section class="filters">
-    <button data-zone="brazo">Brazo</button>
-    <button data-zone="pierna">Pierna</button>
-    <button data-zone="espalda">Espalda</button>
-    <button data-zone="pecho">Pecho</button>
-    <button data-zone="todos">Todos</button>
-  </section>
-
-  <section class="gallery" id="gallery">
-    <!-- Ejemplo de imagen -->
-    <img src="images/tattoos/tattoo1.jpg" alt="Tatuaje brazo" data-zone="brazo" />
-    <!-- Añade más imágenes aquí -->
+  <section class="portfolio">
+    <h2>Galería</h2>
+    <div class="filters">
+      <button data-zone="brazo">Brazo</button>
+      <button data-zone="pierna">Pierna</button>
+      <button data-zone="espalda">Espalda</button>
+      <button data-zone="pecho">Pecho</button>
+      <button data-zone="todos">Todos</button>
+    </div>
+    <div class="gallery" id="gallery">
+      <img src="images/tattoos/tattoo1.jpg" alt="Brazo" data-zone="brazo" />
+      <img src="images/tattoos/tattoo2.jpg" alt="Pierna" data-zone="pierna" />
+      <!-- Añade más imágenes aquí -->
+    </div>
   </section>
 
   <footer>
