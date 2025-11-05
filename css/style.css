@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+}
+
+header {
+  background-color: #1c1c1c;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1em;
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 2em;
+  background: linear-gradient(to bottom, #1c1c1c, #000);
+}
+
+.gallery img {
+  width: 200px;
+  margin: 1em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.filters button {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #333;
+  color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form input,
+.contact-form button {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em;
+  width: 80%;
+}
+
+.social a {
+  display: block;
+  margin: 0.5em 0;
+  color: #f5f5f5;
+}
