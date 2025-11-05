@@ -12,8 +12,12 @@ header {
 }
 
 .logo {
-  width: 120px;
-  margin-bottom: 0.5em;
+  width: 150px; /* ajusta según tu diseño */
+  height: 150px;
+  border-radius: 50%; /* convierte en círculo */
+  border: 4px solid #d4af37; /* borde dorado estilo Anubis */
+  object-fit: cover; /* asegura que la imagen se recorte bien */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); /* brillo sutil */
 }
 
 nav a {
