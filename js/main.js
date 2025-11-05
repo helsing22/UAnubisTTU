@@ -1,4 +1,3 @@
-/// Filtro de galería por zona del cuerpo
 document.querySelectorAll('.filters button').forEach(button => {
   button.addEventListener('click', () => {
     const zone = button.dataset.zone;
@@ -8,7 +7,6 @@ document.querySelectorAll('.filters button').forEach(button => {
   });
 });
 
-// Visualización ampliada de imágenes
 document.querySelectorAll('.gallery img').forEach(img => {
   img.addEventListener('click', () => {
     const overlay = document.createElement('div');
@@ -28,7 +26,6 @@ document.querySelectorAll('.gallery img').forEach(img => {
   });
 });
 
-// Envío de reservas por WhatsApp
 document.getElementById('whatsappForm')?.addEventListener('submit', function (e) {
   e.preventDefault();
   const nombre = this.nombre.value.trim();
@@ -38,4 +35,16 @@ document.getElementById('whatsappForm')?.addEventListener('submit', function (e)
   const mensaje = `Hola, soy ${nombre}. Quiero un tatuaje en la zona ${zona}, estilo ${estilo}, para la fecha ${fecha}.`;
   const telefono = '5355016158';
   window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, '_blank');
+});
+
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('click', () => {
+    alert('Has seleccionado el servicio: ' + card.querySelector('h3').textContent);
+  });
+});
+
+document.querySelectorAll('.testimonial').forEach(testimonial => {
+  testimonial.addEventListener('click', () => {
+    alert('Testimonio de: ' + testimonial.querySelector('h4').textContent);
+  });
 });
