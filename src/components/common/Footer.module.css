@@ -1,0 +1,102 @@
+.footer {
+  background: linear-gradient(180deg, var(--primary-darker) 0%, var(--primary-darkest) 100%);
+  border-top: 1px solid var(--accent-gold);
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-xl);
+  margin-top: var(--spacing-3xl);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.section h3 {
+  color: var(--accent-gold);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.section h4 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-md);
+}
+
+.section p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: all var(--transition-base);
+  padding: var(--spacing-sm) 0;
+}
+
+.link:hover {
+  color: var(--accent-gold);
+  transform: translateX(4px);
+}
+
+.link svg {
+  color: var(--accent-gold);
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent-gold);
+  border-radius: 50%;
+  color: var(--accent-gold);
+  transition: all var(--transition-base);
+}
+
+.socialLinks a:hover {
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  transform: translateY(-4px);
+}
+
+.bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--spacing-xl);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .footer {
+    padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-lg);
+  }
+}

@@ -1,0 +1,139 @@
+.header {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-base);
+  padding: var(--spacing-md) 0;
+}
+
+.header.scrolled {
+  background: rgba(5, 5, 5, 0.95);
+  border-bottom-color: var(--accent-gold);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+  padding: var(--spacing-sm) 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  transition: transform var(--transition-base);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logoText {
+  color: var(--text-primary);
+}
+
+.logoAbbr {
+  color: var(--accent-gold);
+}
+
+.nav {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.navLink {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color var(--transition-base);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width var(--transition-base);
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--accent-gold);
+}
+
+.mobileToggle {
+  display: none;
+  background: none;
+  color: var(--text-primary);
+  padding: var(--spacing-sm);
+  border-radius: 4px;
+  transition: color var(--transition-base);
+}
+
+.mobileToggle:hover {
+  color: var(--accent-gold);
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: var(--spacing-md);
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(5, 5, 5, 0.95);
+    border-bottom: 1px solid var(--accent-gold);
+    padding: var(--spacing-lg) 0;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+  }
+
+  .nav.mobileOpen {
+    display: flex;
+    max-height: 500px;
+  }
+
+  .navLink {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .navLink::after {
+    display: none;
+  }
+
+  .mobileToggle {
+    display: block;
+  }
+}
